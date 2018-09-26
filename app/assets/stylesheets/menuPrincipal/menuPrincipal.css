@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(249, 249, 250);
+}
+
+#menuprincipal {
+    width: 100%;
+    max-width: 420px;
+    padding: 50px;
+    
+    margin: auto;
+}
+
+h4 {
+    color: rgb(0, 0, 0);
+    position: relative;
+    margin-left: -5px;
+    margin-right: 3px;
+}
+
+.z-depth-3 {
+    box-shadow: none;
+}

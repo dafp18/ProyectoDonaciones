@@ -1,0 +1,53 @@
+<h2>Editar usuario</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+    <div class="input-field mdl-js-textfield mdl-textfield--floating-label">
+      <%= f.label :dirección, class:"mdl-textfield__label"%>
+      <%= f.text_field :address, class:"mdl-textfield__input"%>
+    </div> 
+
+    <div class="input-field mdl-js-textfield mdl-textfield--floating-label">
+      <%= f.label :teléfono, class:"mdl-textfield__label"%>
+      <%= f.telephone_field :phone, class:"mdl-textfield__input"%>
+    </div> 
+
+    <div class="input-field mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.label :Correo_electrónico, class:"mdl-textfield__label" %>
+        <%= f.email_field :email, autocomplete: "email" , class:"mdl-textfield__input"%>
+    </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nueva_contraseña %> <i>(Puede dejar este campo en blanco si no desea cambiarla)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> carácteres como mínimo</em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Confirme_nueva_contraseña %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Contraseña_actual%> <i>(Necesitamos su contraseña actual para confirmar sus cambios)</i>
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
+<h3>¿Desea eliminar la cuenta?</h3>
+
+<p><%= button_to "Eliminar mi cuenta", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Regresar", :back %>

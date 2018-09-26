@@ -1,0 +1,16 @@
+        
+    <% if user_signed_in?%>
+    
+      <li><%= link_to 'Editar Usuario',edit_user_registration_path %></li>
+      <li><%= link_to 'Cerrar sesión', destroy_user_session_path%></li>    
+
+    <%else%>
+        <% if controller_name != 'sessions' %>                       
+            <li><%= link_to new_session_path(resource_name), class:"log-in" do%>                                                                                
+            <%= image_tag('user.png',class:'logo-login left', alt:'login')%>                             
+            <span class="text-login">Iniciar sesión</span></li>                         
+            <%end%> <!--end do-->                       
+        <% end %><!--end if controller_name != 'sessions' -->
+    <%end%>
+
+    

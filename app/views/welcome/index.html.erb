@@ -1,0 +1,18 @@
+
+<%= stylesheet_link_tag 'styles-welcome/index-app'%>                   
+
+    <% if current_user %><!--Pendiente modificar estas opciones depende de la vista denuncias-->
+        <%=render 'menuPrincipal/indexapp' %>
+    <%else%>
+    <div class="container-fluid">
+      <div class="form-sign-in z-depth-3" id="div-welcome">
+        <div class="text-center mb-4 py-3">
+          <%= image_tag("logo-app/logo.png",class:"mb-4", height: '120', width: '120')%>
+          <p class=" h3 mb-2 font-weigth-normal">Bienvenidos a <h1 class=" h3 mb-4 font-weigth-normal">Comunidad Segura</h1></p>
+        </div>
+        <%= link_to 'REGISTRARSE', new_user_registration_path, class: "bton  btn-block mdl-button mdl-js-button mdl-js-ripple-effect "%>
+        <%= link_to 'INICIAR SESIÓN', new_user_session_path, class: "bton  btn-block mdl-button mdl-js-button mdl-js-ripple-effect "%>
+    </div>
+  </div>
+<%end%>         
+    

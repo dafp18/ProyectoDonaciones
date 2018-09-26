@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag 'menuPrincipal/menuPrincipal'%>
+<%= render "barra-menu/navbar" %>  
+<div class="container-fluid">
+    <div class="form-sign-in z-depth-3" id="menuprincipal">
+    <div class="text-center mb-4 py-3">
+       <div class="col s12 m4 l6">
+       <%= link_to image_tag('menu-principal/iconos/Icono_nueva.png')  %> &nbsp &nbsp &nbsp &nbsp 
+        <%= link_to image_tag('menu-principal/iconos/icnoHis.png') %>  
+       </div>
+       <h4>Nueva Denuncia &nbsp Historial de Denuncias</h4>   
+       </br> </br>
+       <div class="col s12 m4 l6" id="">
+        <%= link_to image_tag('menu-principal/iconos/iconoContact.png' , :alt => 'ir a denuncia')  %> &nbsp &nbsp &nbsp &nbsp
+        <%= link_to image_tag('menu-principal/iconos/codigoPoli.png', :alt => 'ir a denuncia') %>      
+       </div>
+        <h4>Contactos de Emergencia &nbsp Codigo de Policia</h4> 
+      </div>
+    </div>
+</div>

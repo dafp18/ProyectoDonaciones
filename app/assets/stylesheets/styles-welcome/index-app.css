@@ -1,0 +1,48 @@
+body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #3F51B5;
+    color: aliceblue;
+}
+
+#menuprincipal {
+  width: 100%;
+  max-width: 420px;
+  padding: 50px;
+  background-color: rgb(249, 249, 250);
+  margin: auto;
+}
+
+h4{
+ color: rgb(0, 0, 0);
+ position: relative;
+ margin-left: -5px;
+ margin-right: 3px;
+ }
+
+#div-welcome {
+    width: 100%;
+    max-width: 420px;
+    padding: 50px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+a:hover {
+    text-decoration-line: none;
+    color: #fff;
+}
+
+@media screen and (max-width:570px) {
+    .z-depth-3 {
+        box-shadow: none;
+    }
+}

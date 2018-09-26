@@ -1,0 +1,46 @@
+<%= stylesheet_link_tag 'barra-menu/navbar'%>
+
+<header class="barra-menu" id="barra-menu">
+    <nav>
+        <div class="nav-wrapper">      
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">                             
+                                                       
+                <%= render "barra-menu/links-navbar" %>                  
+                                              
+            </ul>            
+            <% if user_signed_in?%>
+                <span class="navbar-brand titulo">Inicio</span>
+            <%else%>
+                <span class="navbar-brand titulo">Formulario de Registro</span>
+            <%end%>            
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        
+            <% if user_signed_in?%>
+            <li><%= link_to 'Nueva denuncia' %></li>   
+            <li><%= link_to 'Historial de denuncias'%></li>  <!--Links dependen de las demas vistas-->
+            <li><%= link_to 'Contactos de emergencia'%></li>   
+            <li><%= link_to 'Código de pólicia'%></li>
+            <li><%= link_to 'Botón de pánico'%></li>
+            <li><%= link_to 'Editar Usuario',edit_user_registration_path %></li>   
+            <li><%= link_to 'Cerrar sesión', destroy_user_session_path%></li>
+            <%else%>
+                <% if controller_name != 'sessions' %>
+                    <li>
+                        <%= link_to new_session_path(resource_name), class:'first-link' do%>
+                        <%= image_tag('sidebar-inicioapp/menu-side-bar/sign-in.png',class:'img-sidebar', alt:'login', role:'presentation')%>                
+                        <span class="tag-sidebar">Iniciar sesión</span>
+                        <%end%><!--end do-->
+                    </li> 
+                <% end %> <!--end if controller_name != 'sessions' -->
+        <li ><a href="#" class="other-link"><%= image_tag('sidebar-inicioapp/menu-side-bar/logout',class:'img-sidebar', role:'presentation')%><span class="tag-sidebar">Salir de la aplicación</span></a></li>
+            <%end%>      
+        
+    </ul>
+  
+</header>
+
+<%= javascript_include_tag 'barra-menu/navbar'%>

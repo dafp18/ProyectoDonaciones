@@ -1,0 +1,109 @@
+body{
+  font-weight: 500;
+}
+.barra-menu{
+  width: 100%;  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+
+}
+
+nav{
+  background-color: #3F51B5;   
+}
+
+.titulo{
+  margin-top:20px;    
+}
+a[class="log-in"]{
+  margin-top: 10%;
+  opacity: 0.9;
+}
+
+.logo-login{        
+  width: 28px;
+  height: 26px;   
+}
+
+.text-login{
+  display: block;
+  float: left;  
+  padding-left: 8px;
+    
+}
+
+a:hover{
+  background-color: #3F51B5;
+  opacity: 1;
+  border: none;
+  transform: scale(1.1, 1.1);
+}
+
+.menu-fixed {
+	position:fixed;
+	z-index:1000;
+	top:0;	
+	width:100%;
+	box-shadow:0px 4px 3px rgba(0,0,0,.5);
+}
+
+
+
+
+/*--------------Sidebar-----------------*/
+
+ul[class="sidenav"] li a{
+  color: rgba(0, 0, 0, 0.80);
+  font-weight: 500;     
+}
+
+ul[class="sidenav"] li a[class='first-link']{ /*Posiciona el 1 item del menu side-bar*/
+  margin-top: 83px;  
+}
+
+ul[class="sidenav"] li a[class='other-link']{  /*En caso de que algunas imagenes no queden alineadas usar esta clase*/
+  margin-left: 3.5px;
+}
+
+ul[class="sidenav"] .tag-sidebar{
+  margin:auto 32px;
+    
+}
+
+.img-sidebar{ /*Usar esta clase para el tamaño de las imagenes del sidebar*/
+  margin: auto;        
+  width: 18px;
+  height: 18px;
+}
+
+/*Responsive Design*/
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) { 
+  .titulo{
+    margin-top:15px;      
+  }
+ }
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+  div[class="nav-wrapper"]{
+    width: 68%;
+    margin: auto
+  }  
+  
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  div[class="nav-wrapper"]{
+    width: 68%;
+    margin: auto
+  }
+  
+ }
+
+

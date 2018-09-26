@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ComunidadSegura</title>
+    <%= display_meta_tags chartset: '# encoding: UTF-8'%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <%= stylesheet_link_tag    'reset.css/reset' %>
+    <!--Estilos para Boostrap y Material design lite-->
+    <%= stylesheet_link_tag    'material_design_lite_css/material.min' %>
+    <%= stylesheet_link_tag    'boostrap_4.1_css/bootstrap.min' %>
+    <%= stylesheet_link_tag     'materialize/materialize.min'%>
+    <%= stylesheet_link_tag    'application'%>    
+    <!--Jquery-->
+    <%= javascript_include_tag 'jquery_3_3_1/jquery-3.3.1.min'%>             
+  </head>
+
+  <body>
+    <%= yield %>
+
+    
+
+    <!--Librerias js para Boostrap y Material design lite-->        
+    <%= javascript_include_tag 'popper_js/popper.min'%>      
+    <%= javascript_include_tag 'boostrap_4.1_js/bootstrap.min'%>    
+    <%= javascript_include_tag 'material_design_lite_js/material.min'%>
+    <%= javascript_include_tag 'materialize/materialize.min'%>
+    <!--sirve para editar los alerts-->
+    <%= javascript_include_tag 'sweetalert.js/sweetalert.min'%>    
+    </body>
+  </body>
+</html>
