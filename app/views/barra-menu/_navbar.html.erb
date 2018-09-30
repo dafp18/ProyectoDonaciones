@@ -20,12 +20,12 @@
     <ul class="sidenav" id="mobile-demo">
         
             <% if user_signed_in?%>
-            <li><%= link_to 'Nueva denuncia' %></li>   
-            <li><%= link_to 'Historial de denuncias'%></li>  <!--Links dependen de las demas vistas-->
-            <li><%= link_to 'Contactos de emergencia'%></li>   
-            <li><%= link_to 'Código de pólicia'%></li>
-            <li><%= link_to 'Botón de pánico'%></li>
-            <li><%= link_to 'Editar Usuario',edit_user_registration_path %></li>   
+            <li><%= link_to 'Nueva donación' %></li>   
+            <li><%= link_to 'Perfil'%></li>  <!--Links dependen de las demas vistas-->
+            <li><%= link_to 'Donaciones Solicitadas'%></li>   
+            <li><%= link_to 'Mis donaciones'%></li>
+            <li><%= link_to 'Acerca'%></li>
+            #<li><%= link_to 'Editar Usuario',edit_user_registration_path %></li>   
             <li><%= link_to 'Cerrar sesión', destroy_user_session_path%></li>
             <%else%>
                 <% if controller_name != 'sessions' %>

@@ -20,8 +20,8 @@ default: &default
   host: 127.0.0.1
   username: postgres
 <<<<<<< HEAD
-  password: 'Tt1987Nal' #Contraseña del gestor de cada uno
-  database: app-comunidad-segura-development
+  password: '123456' #Contraseña del gestor de cada uno
+  database: 
   pool: 5
 =======
   password: '890611' #Contraseña del gestor de cada uno  
@@ -32,7 +32,7 @@ default: &default
 
 development:
   <<: *default
-  database: appComunidadSeguraDevelopment
+  database: 
   
 
 # Warning: The database defined as "test" will be erased and
@@ -40,8 +40,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: appComunidadSeguraTest
+  database: 
 
 production:
   <<: *default
-  database: appComunidadSeguraProduction
+  database: 
